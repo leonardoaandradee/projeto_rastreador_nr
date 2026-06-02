@@ -16,6 +16,9 @@ pymysql.install_as_MySQLdb()
 
 from pathlib import Path
 
+import os
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -78,15 +81,14 @@ WSGI_APPLICATION = 'frota_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# Se o DATABASE_URL existir (no Render), ele usa a nuvem. 
+# Se não existir (no seu PC), ele tenta o XAMPP local.
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'frota_egermaq',      
-        'USER': 'root',               
-        'PASSWORD': '',               
-        'HOST': '127.0.0.1',          
-        'PORT': '3306',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL', 'mysql://root:@127.0.0.1:3306/frota_egermaq'),
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 
