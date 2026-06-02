@@ -1,0 +1,29 @@
+# ========================
+# Lixo do Python e Django
+# ========================
+venv/
+__pycache__/
+*.pyc
+*.pyo
+db.sqlite3
+staticfiles/
+.env
+
+# ========================
+# PlatformIO / ESP32
+# ========================
+.pio/
+.vscode/
+
+# ========================
+# ⚠️ SEGURANÇA (NÃO SUBIR)
+# ========================
+# Ignora os certificados e chaves privadas do broker
+emqx-broker/certs/*.key
+emqx-broker/certs/*.crt
+emqx-broker/certs/*.csr
+emqx-broker/certs/*.pem
+emqx-broker/certs/*.srl
+
+# Ignora o código C++ que tem a chave do caminhão injetada
+esp32-firmware/src/secrets.h
