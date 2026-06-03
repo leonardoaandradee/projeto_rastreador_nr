@@ -8,7 +8,7 @@ class MqttUsers(models.Model):
     ativo = models.IntegerField(default=1) 
 
     class Meta:
-        managed = False  # O SEGREDO! Impede o Django de bagunçar o XAMPP
+        managed = True  # O SEGREDO! Impede o Django de bagunçar o XAMPP
         db_table = 'mqtt_users'  # O nome exato da tabela lá no banco de dados
         verbose_name = 'Caminhão'
         verbose_name_plural = 'Caminhões'
