@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Rastreador IoT</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">
+                    <img src="imagens/logo.png" alt="Logo" style="height: 70px;">
+                </a>
+                <ul class="right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plataforma.html">Plataforma</a></li>
+                <li><a href="dispositivo.html">Dispositivo</a></li>
+                <li><a href="aplicativo.html">Aplicativo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+<div class="container">
+
+    <h4>Visão Geral</h4>
+
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">Monitoramento de Cargas</span>
+    
+            <p>
+                Este projeto consiste em um sistema de monitoramento de cargas refrigeradas ou congeladas,
+                capaz de acompanhar em tempo real a temperatura e a localização durante o transporte da carga.
+            </p>
+
+            <p>
+                A solução utiliza tecnologias de IoT para garantir maior controle logístico e a
+                segurança da carga.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">Objetivo</span>
+            <p>
+                O objetivo do projeto é facilitar a logística da carga sem a necessidade de verificação constante da temperatura,
+                permitindo que o compartimento seja aberto apenas no momento necessário, evitando variações térmicas indesejadas.
+                Além disso, o sistema possibilita o controle das rotas percorridas pela carga durante o transporte.
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">Foto(WIP)</span>
+            <p>
+                Aqui vai uma foto do dispositivo final.(WIP)
+            </p>
+        </div>
+    </div>
+
+    <h4>Tecnologias Utilizadas</h4>
+
+    <div class="card">
+        <div class="card-content">
+
+            <ul class="lista-topicos">
+                <li><strong><span class="highlight-esp">ESP32 Wi-Fi/Bluetooth (DOIT DevKit)</span>:</strong> microcontrolador principal com suporte a bateria.</li>
+                <li><strong><span class="highlight-esp">Módulo GPS GY-NEO6MV2</span>:</strong> responsável pela localização em tempo real.</li>
+                <li><strong><span class="highlight-esp">Sensor de temperatura DHT22</span>:</strong> mede a temperatura do baú refrigerado.</li>
+                <li><strong><span class="highlight-esp">LEDs indicadores</span>:</strong> um LED indica o status de conexão, outro indica se o dispositivo está ligado/desligado e o LED RGB representa o nível de bateria.</li>
+                <li><strong><span class="highlight-esp">Botão liga/desliga</span>:</strong> controle manual do dispositivo.</li>
+                <li><strong><span class="highlight-esp">MQTT (EMQX)</span>:</strong> envio de dados para a plataforma.</li>
+                <li><strong><span class="highlight-esp">Dados coletados</span>:</strong> o sistema coleta informações de temperatura e localização, permitindo acompanhar o trajeto do caminhão e a variação de temperatura ao longo do percurso.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <h4>Arquitetura do Sistema</h4>
+
+    <div class="card">
+        <div class="card-content">
+
+            <ul class="lista-topicos">
+                <li><strong>Inicialização:</strong> o dispositivo O sistema utiliza um <span class="highlight-esp">ESP32</span> para coleta de dados. é ligado e alimentado por bateria, iniciando o sistema de monitoramento.</li>
+
+                <li><strong>Coleta de dados:</strong> o sensor de temperatura mede as condições internas da carga e o módulo GPS obtém a localização em tempo real.</li>
+
+                <li><strong>Envio periódico:</strong> os dados de temperatura e localização são enviados a cada 5 minutos.</li>
+
+                <li><strong>Comunicação MQTT (EMQX):</strong> o O sistema utiliza um <span class="highlight-esp">ESP32</span> para coleta de dados. envia os dados via protocolo MQTT para o broker, responsável por intermediar a comunicação.</li>
+
+                <li><strong>Processamento:</strong> a plataforma recebe e organiza os dados enviados pelo dispositivo.</li>
+
+                <li><strong>Armazenamento:</strong> as informações são salvas em um banco de dados MySQL para registro e histórico.</li>
+
+                <li><strong>Visualização:</strong> os dados são exibidos em tempo real no aplicativo e dashboard, como o IoT MQTT Panel.</li>
+
+                <li><strong>Monitoramento:</strong> o sistema permite acompanhar o trajeto do caminhão e a variação de temperatura durante o transporte.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    
+    <h4>Código Fonte</h4>
+
+    <div class="card">
+        <div class="card-content">
+            <p>
+                Acesse o repositório do nosso projeto no GitHub:
+            </p>
+            <a href="#">https://github.com/erick-henrick/projeto_rastreador_nr</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

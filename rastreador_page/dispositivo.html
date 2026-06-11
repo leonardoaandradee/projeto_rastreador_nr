@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dispositivo</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">
+                    <img src="imagens/logo.png" alt="Logo" style="height: 70px;">
+                </a>
+                <ul class="right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plataforma.html">Plataforma</a></li>
+                <li><a href="dispositivo.html">Dispositivo</a></li>
+                <li><a href="aplicativo.html">Aplicativo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container">
+
+        <h4>Instalação do Dispositivo</h4>
+
+        <div class="card">
+            <div class="card-content">
+
+                <ul class="lista-topicos">
+                    <li><strong>Preparação:</strong> identificar o local mais adequado entre o baú da carga e a cabine do caminhão para a instalação do sistema.</li>
+
+                    <li><strong>Perfuração:</strong> realizar um pequeno furo na estrutura para permitir a passagem do cabo do sensor de temperatura.</li>
+
+                    <li><strong>Fixação dos suportes:</strong> instalar suportes de fixação em ambos os lados da estrutura, sendo um na parte externa e outro na parte interna do baú.</li>
+
+                    <li><strong>Instalação externa:</strong> o dispositivo principal deve ser fixado no suporte externo.</li>
+
+                    <li><strong>Passagem do cabo:</strong> o cabo do sensor deve passar pelo furo realizado, conectando a parte externa à interna do baú.</li>
+
+                    <li><strong>Instalação interna:</strong> o sensor de temperatura deve ser fixado no suporte interno previamente instalado.</li>
+
+                    <li><strong>Finalização:</strong> garantir que todas as conexões estejam firmes e que o sistema esteja protegido contra movimentações e vibrações durante o transporte.</li>
+                    </ul>
+            </div>
+        </div>
+
+        <h4>Montagem do Circuito</h4>
+
+        <div class="card">
+            <div class="card-content">
+                <p class="center-align flow-text" style="color: #4FC3F7;">
+                    <strong>Simulação do circuito do dispositivo utilizando a plataforma Wokwi.</strong>
+                </p>
+                <div class="center-align">
+                    <img src="imagens/circuito.png" alt="Imagem do circuito feito no wokwi" class="responsive-img" style="width: 50%;">
+                </div>
+            </div>
+        </div>
+
+        <h4>PCB do dispositivo</h4>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="center-align">
+                    <img src="imagens/pcb.png" alt="Imagem do circuito feito no wokwi" class="responsive-img" style="width: 50%;">
+                </div>
+            </div>
+        </div>
+
+        <h4>Componentes do Dispositivo</h4>
+
+        <div class="card">
+            <div class="card-content">
+
+                <ul class="lista-topicos">
+
+                <li><strong><span class="highlight-esp">ESP32 Wi-Fi/Bluetooth (DOIT DevKit)</span>:</strong> responsável pelo controle geral do sistema, processamento dos dados e envio das informações via internet.</li>
+
+                <li><strong><span class="highlight-esp">Módulo GPS GY-NEO6MV2</span>:</strong> utilizado para obter a localização em tempo real da carga durante o transporte.</li>
+
+                <li><strong><span class="highlight-esp">Sensor de temperatura DHT11</span>:</strong> realiza a medição da temperatura interna do baú da carga.</li>
+
+                <li><strong><span class="highlight-esp">LED de conexão</span>:</strong> indica o status de conexão do dispositivo com a rede.</li>
+
+                <li><strong><span class="highlight-esp">LED de funcionamento</span>:</strong> indica se o dispositivo está ligado ou desligado.</li>
+
+                <li><strong><span class="highlight-esp">LED RGB</span>:</strong> utilizado para indicar o nível de bateria do dispositivo.</li>
+
+                <li><strong><span class="highlight-esp">Botão liga/desliga</span>:</strong> permite o acionamento manual do sistema.</li>
+
+                <li><strong><span class="highlight-esp">Alimentação por bateria</span>:</strong> garante o funcionamento do dispositivo de forma autônoma durante o transporte.</li>
+                 
+                <li><strong><span class="highlight-esp">Case plástica principal</span>:</strong> Compartimento externo responsável por abrigar o ESP32, o módulo GPS e os demais circuitos eletrônicos, protegendo o sistema contra poeira, impactos e condições climáticas.</li>
+                
+                <li><strong><span class="highlight-esp">Case plástica interna</span> para o sensor de temperatura:</strong> Compartimento menor instalado dentro do compartimento de carga, responsável por proteger o sensor de temperatura contra danos físicos, mantendo-o exposto ao ar interno para medições precisas.</li>
+
+                <li><strong><span class="highlight-esp">Passagem de cabo vedada</span>:</strong> Elemento utilizado para permitir a saída do cabo do sensor de temperatura da case principal, evitando entrada de água e poeira.</li>
+
+                <li><strong><span class="highlight-esp">Suportes de fixação</span>:</strong> Estrutura utilizada para fixar as cases ao veículo.</li>   
+                </ul>
+
+            </div>
+        </div>
+
+        <h4>Protótipo final</h4>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="center-align">
+                    <img src="imagens/case.jpeg" alt="Imagem do circuito feito no wokwi" class="responsive-img" style="width: 50%;">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
