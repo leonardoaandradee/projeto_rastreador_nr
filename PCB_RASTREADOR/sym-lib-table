@@ -1,0 +1,5 @@
+(sym_lib_table
+        (version 7)
+        (lib (name "CELUS")(type "KiCad")(uri "${KIPRJMOD}/CELUS.kicad_sym")(options "")(descr ""))
+    )
+    

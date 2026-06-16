@@ -1,0 +1,5 @@
+(fp_lib_table
+            (version 7)
+            (lib (name "CELUS")(type "KiCad")(uri "${KIPRJMOD}/CELUS.pretty")(options "")(descr ""))
+        )
+        
